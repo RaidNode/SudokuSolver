@@ -1,2 +1,2 @@
 # SudokuSolver
-A cool soduku solver thing.
+A cool sudoku solver thing.
