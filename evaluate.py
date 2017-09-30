@@ -23,7 +23,7 @@ def evaluate_row(sudoku, x):
 def evaluate_row2(sudoki, x):
 
     # Return True for valid row
-    # Return Fasle for invalid row
+    # Return False for invalid row
 
 
     number_list = []
