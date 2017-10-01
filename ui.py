@@ -10,7 +10,8 @@ class MainWindow(QtWidgets.QWidget):
         for x in range(0, 9):
             for y in reversed(range(0, 9)):
                 grid_space = QtWidgets.QLineEdit()
-                grid_space.setValidator(QtGui.QIntValidator())
+                # We have to use RegExp because IntValidator doesn't let us do number ranges the way we want to.
+                grid_space.setValidator(QtGui.QRegExpValidator(QtCore.QRegExp("^[1-9]$")))
                 grid_space.setMaxLength(1)
                 grid_space.setAlignment(QtCore.Qt.AlignCenter)
                 grid_space.setFixedWidth(20)
