@@ -8,29 +8,6 @@ def evaluate_row(sudoku, x):
     # Generate a list of numbers from the numbers in the sudoku
     for number in sudoku[x]:
 
-        number_list.append(number)
-
-    # Check if every number 1 to 9 appears in the string
-    for i in range(1, 10):
-
-        if i not in number_list:
-
-            return False
-
-    return True
-
-# This one is probably quicker
-def evaluate_row2(sudoki, x):
-
-    # Return True for valid row
-    # Return False for invalid row
-
-
-    number_list = []
-
-    # Generate a list of numbers from the numbers in the sudoku
-    for number in sudoku[x]:
-
         if number in number_list:
 
             return False
@@ -40,6 +17,7 @@ def evaluate_row2(sudoki, x):
             number_list.append(number)
 
     return True
+
 
 def evaluate_column(sudoku, y):
 
