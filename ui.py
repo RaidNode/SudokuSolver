@@ -30,4 +30,4 @@ class MainWindow(QtWidgets.QWidget):  # Create our MainWindow class.
         self.show()  # Make the window appear.
 
     def get_grid_value(self, x, y):  # Function to get the value entered in a specific part of the grid.
-        return self.inputGrid[x][y].text() # Returns the value as a string.
+        return self.inputGrid[x][y].text()  # Returns the value as a string.
