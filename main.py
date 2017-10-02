@@ -23,7 +23,7 @@ def solve():
                 grid_column[grid_column_y] = int(grid_value)  # ...put the number in.
 
             print(grid_column[grid_column_y])  # Print for testing.
-            return
+    return
 
 
 window.solveButton.clicked.connect(solve)  # Attach the solve function to the button on the UI.
