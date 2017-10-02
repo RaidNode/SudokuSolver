@@ -56,6 +56,7 @@ def evaluate_block(sudoku, x, y):
     lower_x = int(block_x * 3)
     lower_y = int(block_y * 3)
 
+    # Iterate through
     for x in range(lower_x, lower_x + 2):
 
         for y in range(lower_y, lower_y + 2):
