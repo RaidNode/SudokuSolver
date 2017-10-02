@@ -24,8 +24,19 @@ def evaluate_column(sudoku, y):
     # Return True for valid column
     # Return False for invalid column
 
-    # Do stuff
-    return sudoku[y]
+    number_list = []
+
+    for row in sudoku:
+
+        if row[y] in number_list and row[y] is not None:
+
+            return False
+
+        else:
+
+            number_list.append(row[y])
+
+    return True
 
 
 def evaluate_block(sudoku, x, y):
