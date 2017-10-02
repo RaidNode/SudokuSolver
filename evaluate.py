@@ -8,7 +8,7 @@ def evaluate_row(sudoku, x):
     # Generate a list of numbers from the numbers in the sudoku
     for number in sudoku[x]:
 
-        if number in number_list and number != None:
+        if number in number_list and number is not None:
 
             return False
 
