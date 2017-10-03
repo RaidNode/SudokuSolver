@@ -5,7 +5,7 @@ def evaluate_row(sudoku, x):
 
     number_list = []
 
-    # Generate a list of numbers from the numbers in the sudoku
+    # Generate a list of numbers from the numbers in the sudoku and return false if a number appears more than once
     for number in sudoku[x]:
 
         if number in number_list and number is not None:
@@ -26,6 +26,7 @@ def evaluate_column(sudoku, y):
 
     number_list = []
 
+    # Generate a list of numbers from the numbers in the sudoku and return false if a number appears more than once
     for row in sudoku:
 
         if row[y] in number_list and row[y] is not None:
@@ -56,9 +57,10 @@ def evaluate_block(sudoku, x, y):
     lower_x = int(block_x * 3)
     lower_y = int(block_y * 3)
 
-    # Iterate through
+    # Iterate through each row of the block
     for x in range(lower_x, lower_x + 2):
 
+        # Generate a list of numbers from the numbers in the sudoku and return false if a number appears more than once
         for y in range(lower_y, lower_y + 2):
 
             if sudoku[x][y] in number_list and sudoku[x][y] is not None:
