@@ -17,6 +17,7 @@ grid = []
 for i in range(0, 9):
     grid.append([None, None, None, None, None, None, None, None, None])
 
+
 def solve():
     for grid_column in grid:  # Go through the columns of the grid.
         for grid_column_y in range(len(grid_column)):  # Go through the individual numbers in the column.
@@ -28,6 +29,7 @@ def solve():
 
             print(grid_column[grid_column_y])  # Print for testing.
     return
+
 
 window.solveButton.clicked.connect(solve)  # Attach the solve function to the button on the UI.
 app.exec_()  # Start the UI.
