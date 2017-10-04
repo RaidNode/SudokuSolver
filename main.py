@@ -6,6 +6,7 @@
 # Module Imports
 import sys
 from PyQt5 import QtWidgets
+from solve import *
 
 # Local Imports
 import ui
@@ -25,7 +26,7 @@ def solve():
                 grid_column[y] = None  # ...put nothing...
             else:  # ...or if there is something...  ( We don't need to validate because we do that in the UI. )
                 grid_column[y] = int(grid_value)  # ...put the number in.
-    print( grid )
+    solve_sudoku(grid)
     return
 
 window.solveButton.clicked.connect(solve)  # Attach the solve function to the button on the UI.
