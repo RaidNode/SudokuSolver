@@ -6,10 +6,11 @@
 # Module Imports
 import sys
 from PyQt5 import QtWidgets
-from solve import *
 
 # Local Imports
 import ui
+import solve
+
 
 app = QtWidgets.QApplication(sys.argv)  # Create the base QT Application.
 window = ui.MainWindow()  # Create the MainWindow class.
@@ -18,7 +19,7 @@ grid = []
 for i in range(0, 9):
     grid.append([None, None, None, None, None, None, None, None, None])
 
-def solve():
+def start():
     for x, grid_column in enumerate(grid):  # Go through the columns of the grid.
         for y in range(len(grid_column)):  # Go through the individual numbers in the column.
             grid_value = window.get_grid_value(x, y)  # Get the value on the UI.
@@ -27,8 +28,9 @@ def solve():
             else:  # ...or if there is something...  ( We don't need to validate because we do that in the UI. )
                 grid_column[y] = int(grid_value)  # ...put the number in.
 
-    solve_sudoku(grid)
+    solve.solve_sudoku(grid)
     return
 
-window.solveButton.clicked.connect(solve)  # Attach the solve function to the button on the UI.
+
+window.solveButton.clicked.connect(start)  # Attach the solve function to the button on the UI.
 app.exec_()  # Start the UI.
