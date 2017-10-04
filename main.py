@@ -26,6 +26,7 @@ def solve():
                 grid_column[y] = None  # ...put nothing...
             else:  # ...or if there is something...  ( We don't need to validate because we do that in the UI. )
                 grid_column[y] = int(grid_value)  # ...put the number in.
+
     solve_sudoku(grid)
     return
 
